@@ -2,10 +2,9 @@ import streamlit as st
 import google.generativeai as genai
 from google.generativeai import types
 
-api_key = st.secrets["google"]["api_key"]
 # Configuração da API Key e Modelo
-genai.configure(api_key=api_key)
-
+genai.configure(api_key="AIzaSyBt5zfhvZY0wMhjS78U-QwRmmUEEOXpZok")
+#não lembro como encripitar a chave, então vou deixar em branco, mas funciona se você colocar sua chave API aqui.
 try:
     model = genai.GenerativeModel("gemini-2.0-flash")
 except Exception as e:
